@@ -1,5 +1,3 @@
-console.log('hi poda')
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 
