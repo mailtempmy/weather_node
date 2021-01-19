@@ -10,6 +10,9 @@ const pathPublicDirectory = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
 
+//port from heroku
+const port = process.env.PORT || 3000
+
 //setup static directory to serve
 app.use(express.static(pathPublicDirectory))
 
@@ -80,6 +83,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is up!')
 })
